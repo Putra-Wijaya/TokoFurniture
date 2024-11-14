@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php"
+         colors="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>./tests/unit</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <!-- Definisikan variabel lingkungan jika perlu -->
+        <env name="CI_ENV" value="testing"/>
+    </php>
+</phpunit>
