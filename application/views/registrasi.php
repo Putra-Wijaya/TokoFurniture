@@ -20,12 +20,12 @@
 
 						<form method="post" action="<?php echo base_url('registrasi/index')?>" class="user row login_form">
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama Anda" name="nama">
+								<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama Lengkap" name="nama">
                                  <?php echo form_error('nama', '<div class="text-danger small ml-2">', '</div>') ?>
 							</div>
 
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Username Anda" name="username">
+								<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email" name="username">
                                 <?php echo form_error('username', '<div class="text-danger small ml-2">', '</div>') ?>
 							</div>
 							

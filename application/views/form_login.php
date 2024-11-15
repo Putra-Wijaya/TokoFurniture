@@ -20,7 +20,7 @@
 						
 						<form method="post" action="<?php echo base_url('auth/login') ?>" class="user row login_form">
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="username">
+								<input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email" name="username">
 								<?php echo form_error('username', '<div class="text-danger small ml-2">', '</div>') ?>
 							</div>
 
