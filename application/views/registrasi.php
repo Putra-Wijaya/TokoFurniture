@@ -7,9 +7,8 @@
 					<div class="login_box_img">
 						<img class="img-fluid" src="<?= base_url () ?>assets/Front/img/Login.png">
 						<div class="hover">
-							<!-- <h4>New to our website?</h4> -->
 							<p>Lanjutkan daftar untuk melakukan login dan melakukan pemesanan produk, Sudah punya akun???</p>
-							<a class="primary-btn" href="<?= base_url('auth/login');?>">Masuk</a>
+							<a class="primary-btn" href="<?= base_url('Auth/login') ?>">Masuk</a>
 						</div>
 					</div>
 				</div>
@@ -18,7 +17,7 @@
 						<h3>Daftar Akun</h3>
 						<?= $this->session->flashdata('pesan')?>
 
-						<form method="post" action="<?= base_url('registrasi/index')?>" class="user row login_form">
+						<form method="post" action="<?= base_url('Registrasi/index')?>" class="user row login_form">
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Nama Lengkap" name="nama">
                                  <?= form_error('nama', '<div class="text-danger small ml-2">', '</div>') ?>
