@@ -205,7 +205,7 @@ class Dashboard extends CI_Controller{
 		 // Cek jika keranjang belanja tidak kosong
 		 if (!empty($keranjang)) {
 			 // Mulai transaksi
-			 $this->db->trans_start();
+			//  $this->db->trans_start();
  
 			 // Masukkan data invoice ke tabel invoice
 			 $data_invoice = [
@@ -239,7 +239,7 @@ class Dashboard extends CI_Controller{
 			 }
  
 			 // Commit transaksi
-			 $this->db->trans_complete();
+			//  $this->db->trans_complete();
  
 			 // Jika transaksi sukses
 			 if ($this->db->trans_status() === TRUE) {
@@ -251,7 +251,7 @@ class Dashboard extends CI_Controller{
 				 redirect('dashboard/pembayaran'); // Redirect ke halaman konfirmasi
 			 } else {
 				 // Jika terjadi kesalahan
-				 $this->db->trans_rollback();
+				//  $this->db->trans_rollback();
 				 $this->session->set_flashdata('error', 'Terjadi kesalahan, pesanan gagal diproses.');
 				 redirect('dashboard/pembayaran'); // Redirect kembali ke halaman checkout
 			 }
