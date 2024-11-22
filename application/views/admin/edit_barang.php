@@ -13,11 +13,11 @@
 							<?php foreach($barang as  $brg)  : ?>
 							<div class="wdgt-titl">
 								<div class="row">
-									<img src="<?php echo base_url('uploads/' . $brg->gambar); ?>" alt="<?php echo $brg->nama_barang; ?>" width="75" height="75">
 									<h4><?php echo $brg->nama_barang?></h4>
 								</div>
                                 <p>Masukan data produk terbaru </p>
                             </div>
+							<img src="<?php echo base_url('uploads/' . $brg->gambar); ?>" alt="<?php echo $brg->nama_barang; ?>" width="75" height="75">
 
                             <form class="cont-frm" method="post" action="<?php echo base_url().'admin/data_barang/update' ?>">
                                 

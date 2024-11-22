@@ -285,8 +285,6 @@ class Dashboard extends CI_Controller{
 		 }
 	}
 
-
-
     /**
      * proses_pesanan
      *
@@ -307,8 +305,6 @@ class Dashboard extends CI_Controller{
         
     // }
     
-
-
     /**
      * detail
      *

@@ -11,9 +11,6 @@ class Dashboard_model extends CI_Model {
     /**
      * getTotalPendapatan
      * 
-     * Fungsi ini menghitung total pendapatan berdasarkan jumlah barang yang terjual dan harga.
-     * Mengambil data dari tabel 'pesanan' dan mengembalikan total pendapatan dalam format Rupiah.
-     *
      * @return string Total pendapatan dalam format Rupiah.
      */
     public function getTotalPendapatan() {

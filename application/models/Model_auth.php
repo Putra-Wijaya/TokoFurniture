@@ -3,25 +3,32 @@
 /**
  * Model_auth
  */
-class Model_auth extends CI_Model{    
+class Model_auth extends CI_Model
+{
     /**
      * cek_login
      *
-     * @return void
+     * @param string $username
+     * @param string $password
+     * @return object|false
      */
-    public function cek_login()
+    public function cek_login($username, $password)
     {
-        $username = set_value('username');
-        $password = set_value('password');
+        // Ambil data user berdasarkan username
+        $user = $this->db->select('username, password, role_id, nama')
+                         ->where('username', $username)
+                         ->limit(1)
+                         ->get('user')
+                         ->row();
 
-        $result = $this->db->where('username', $username)
-                           ->where('password', $password)
-                           ->limit(1)
-                           ->get('user');
-        if($result->num_rows() > 0){
-            return $result->row();
-        } else {
-            return array();
+        // Jika user ditemukan, verifikasi password
+        if ($user) {
+            if (password_verify($password, $user->password)) {
+                return $user; // Return data user jika password cocok
+            }
         }
+
+        return FALSE; // Return FALSE jika user tidak ditemukan atau password salah
     }
 }
+
