@@ -65,8 +65,8 @@ class Kontak extends CI_Controller {
             $config['protocol'] = 'smtp';
             $config['smtp_host'] = 'smtp.gmail.com'; // SMTP host
             $config['smtp_port'] = 587; // SMTP port
-            $config['smtp_user'] = '11211513@nusamandiri.ac.id';
-            $config['smtp_pass'] = 'Putrawijaya21';
+            $config['smtp_user'] = '';
+            $config['smtp_pass'] = '';
             $config['mailtype'] = 'html'; // Tipe email
             $config['charset'] = 'utf-8'; // Karakter set
             $config['newline'] = "\r\n"; // Newline
@@ -76,7 +76,7 @@ class Kontak extends CI_Controller {
             $this->email->initialize($config); // Menginisialisasi konfigurasi email
 
             $this->email->from($data['email'], $data['name']);
-            $this->email->to('11211513@nusamandiri.ac.id'); // Ganti dengan alamat email tujuan
+            $this->email->to(''); // Ganti dengan alamat email tujuan
             $this->email->subject($data['subject']);
             $this->email->message($data['message']);
 
